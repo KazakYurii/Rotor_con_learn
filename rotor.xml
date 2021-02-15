@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="Yuri" on="12/18/20||13:17:15" using="Simscape Multibody Link Version 7.2" from="Autodesk Inventor 2021 (Build 250183000, 183)"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="centimeter"/>
+<RootAssembly name="rotor.iam" uid="rotor.iam_{55EB8BA1-47F5-397E-5CB2-14B8A1E204C2}" version="{DF3C5C52-3C3C-0CE8-0495-676703CF7263}">
+<AssemblyFile name="rotor.iam" type="Inventor Assembly"/>
+<InstanceTree>
+<Instance name="ber:1" grounded="true" uid="ber:1" entityUid="ber.ipt_{D4FED07C-4147-E0C2-0622-308E082F5587}">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>7.0195250444810062 8.7638499963138834 8.5999999999999979</Translation>
+</Transform>
+</Instance>
+<Instance name="muft:1" grounded="true" uid="muft:1" entityUid="muft.ipt_{AF26E02A-4DE8-88E2-0716-0FA9D5EF5586}" transientUid="muft_1_{64322C44-782E-27CC-49AA-9A05CF6CB0DE}">
+<Transform>
+<Rotation>0.98310250530705467 0.18305590419047313 0 -0.18305590419047313 0.98310250530705467 0 0 0 1</Rotation>
+<Translation>7.0195250444810062 8.7638499963138834 51.099999999999994</Translation>
+</Transform>
+</Instance>
+<Instance name="val:1" uid="val:1" entityUid="val.ipt_{6F45E78E-4924-8873-C599-17912A6555AB}">
+<Transform>
+<Rotation>-0.5439826094930168 -0.83909649061903246 0 0.83909649061903246 -0.5439826094930168 0 0 0 1</Rotation>
+<Translation>7.019525044481008 8.7638499963138869 5.5999999999999979</Translation>
+</Transform>
+</Instance>
+<Instance name="val_rot:1" grounded="true" uid="val_rot:1" entityUid="val_rot.ipt_{970E9A18-400C-8D52-17BE-D8A9B3F458BB}">
+<Transform>
+<Rotation>0.98310250530705467 0.18305590419047313 0 -0.18305590419047313 0.98310250530705467 0 0 0 1</Rotation>
+<Translation>7.0195250444810018 8.7638499963138798 54.699999999999996</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Вставка:1">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>muft:1</Uid>
+</InstancePath>
+<Position>-2.6645352591003757e-15 -3.5527136788005009e-15 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>val:1</Uid>
+</InstancePath>
+<Position>0 0 44</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Вставка:1_Coincident">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>muft:1</Uid>
+</InstancePath>
+<Position>-2.6645352591003757e-15 -3.5527136788005009e-15 -1.5</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>val:1</Uid>
+</InstancePath>
+<Position>0 0 44</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+<Joints>
+<Cylindrical name="Цилиндрический:1">
+<BaseFrame>
+<InstancePath>
+<Uid>val:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 3</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>ber:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>-1 0 0 0 -1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Цилиндрический:2">
+<BaseFrame>
+<InstancePath>
+<Uid>val:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 45.299999999999997</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>muft:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>-2.6645352591003757e-15 -3.5527136788005009e-15 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+<Cylindrical name="Цилиндрический:3">
+<BaseFrame>
+<InstancePath>
+<Uid>muft:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>-2.6645352591003757e-15 -3.5527136788005009e-15 3.6000000000000014</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>val_rot:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 0 0 0 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+</Joints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="ber.ipt" uid="ber.ipt_{D4FED07C-4147-E0C2-0622-308E082F5587}" version="{393869DE-C8B2-D42E-BC20-AEFD1D2EB7EF}">
+<PartFile name="ber.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.028330029984432174</Mass>
+<CenterOfMass>-8.529513513048905e-10 0 0.993983593978922</CenterOfMass>
+<Inertia>0.10498969553954704 0.10498971991971458 0.19109519155208421 0 1.4538126149320038e-13 0</Inertia>
+</MassProperties>
+<GeometryFile name="ber_ipt_d79cf022.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part transient="true" name="muft_1" uid="muft_1_{64322C44-782E-27CC-49AA-9A05CF6CB0DE}" version="">
+<MassProperties>
+<Mass>0.019807741680882819</Mass>
+<CenterOfMass>8.0034492646147022e-10 -4.4581685596946603e-12 1.8891356066613798</CenterOfMass>
+<Inertia>0.044989455625736328 0.044989450361040344 0.04060078236051258 1.9509956445355933e-13 4.855215174304596e-12 -2.0927302557609171e-11</Inertia>
+</MassProperties>
+<GeometryFile name="muft_1_ipt_e745cb7c.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="val.ipt" uid="val.ipt_{6F45E78E-4924-8873-C599-17912A6555AB}" version="{14CE2704-604A-6D83-1759-F6947A3DDB98}">
+<PartFile name="val.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.56616868909828655</Mass>
+<CenterOfMass>4.1491926441529232e-10 0 22.510080957934669</CenterOfMass>
+<Inertia>96.703671494951067 96.703671350592799 1.1177791308597784 1.4802210348386026e-15 4.7507747427428299e-11 1.3642420527537342e-15</Inertia>
+</MassProperties>
+<GeometryFile name="val_ipt_6fa5e422.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="val_rot.ipt" uid="val_rot.ipt_{970E9A18-400C-8D52-17BE-D8A9B3F458BB}" version="{B2FEE683-7756-70C0-8EF6-46BDCD154A5B}">
+<PartFile name="val_rot.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.0050265482457434512</Mass>
+<CenterOfMass>1.6730866158133794e-10 0 1.2500000000000002</CenterOfMass>
+<Inertia>0.003422241649243575 0.0034222414415106118 0.0016084953347714262 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="val_rot_ipt_c1ddabc1.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
